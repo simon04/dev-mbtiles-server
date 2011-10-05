@@ -1,0 +1,8 @@
+#AddHandler mod_python .py
+#PythonHandler index
+#PythonDebug On
+#DirectoryIndex index.py
+
+RewriteEngine On
+RewriteRule ^([0-9]+)/([0-9]+)/([0-9]+)\.png$ index.py/?z=$1&x=$2&y=$3
+
